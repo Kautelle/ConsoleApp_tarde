@@ -18,6 +18,10 @@ namespace ConsoleApp_tarde
             Valor = valor;
             descricao = descricao;
         }
+
+        public int getid() { return id; }
+        public decimal GetValor() {  return Valor; }
+        public string GetDescricao() {  return descricao; }
     }
 
 }
