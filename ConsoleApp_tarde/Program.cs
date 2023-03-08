@@ -14,3 +14,9 @@ p2.setDescricao("Teclado Razer");
 
 Console.WriteLine(p1.getDescricao() + " " + p1.getValor());
 
+//Client
+
+Cliente c1 = new Cliente(1, "Cliente X" , "16 997060647");
+
+Console.WriteLine(c1.getId() + "  "+ c1.getName() + " Telefone " + c1.getTelefone());
+
