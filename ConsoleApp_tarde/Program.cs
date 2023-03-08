@@ -20,3 +20,9 @@ Cliente c1 = new Cliente(1, "Cliente X" , "16 997060647");
 
 Console.WriteLine(c1.getId() + "  "+ c1.getName() + " Telefone " + c1.getTelefone());
 
+//Endereco
+
+Endereco e1 = new Endereco(1, "15902122", "Rua Francisco Ponzio",230,"vila rosa","Taquaritinga");
+
+Console.WriteLine(e1.getId() + " Cep: "+ e1.getCEP() + " Endereço: " + e1.getRua()+" Numero: "+e1.getNumero()+" Bairro: "+e1.getBairro()+" Cidade: "+e1.getCidade());
+
