@@ -6,7 +6,18 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp_tarde
 {
-    internal class Produto
+    public class Produto
     {
+        private int id;
+        private decimal Valor;
+        private string descricao;
+
+        public Produto(int id, decimal valor, string descricao)
+        {
+            id = id;
+            Valor = valor;
+            descricao = descricao;
+        }
     }
+
 }
