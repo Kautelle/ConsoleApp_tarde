@@ -26,3 +26,4 @@ Endereco e1 = new Endereco(1, "15902122", "Rua Francisco Ponzio",230,"vila rosa"
 
 Console.WriteLine(e1.getId() + " Cep: "+ e1.getCEP() + " Endereço: " + e1.getRua()+" Numero: "+e1.getNumero()+" Bairro: "+e1.getBairro()+" Cidade: "+e1.getCidade());
 
+//tes
