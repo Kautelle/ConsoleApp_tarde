@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp_tarde
+namespace ConsoleApp_Tarde
 {
     public class Endereco
     {
@@ -15,7 +15,7 @@ namespace ConsoleApp_tarde
         private string Bairro;
         private string Cidade;
 
-    public Endereco(int id, string cep, string rua, int numero, string bairro, string cidade)
+        public Endereco(int id, string cep, string rua, int numero, string bairro, string cidade)
         {
             Id = id;
             CEP = cep;
@@ -23,31 +23,68 @@ namespace ConsoleApp_tarde
             Numero = numero;
             Bairro = bairro;
             Cidade = cidade;
+        }
 
+        public void AtualizarEndereco(string rua, int numero, string bairro)
+        {
+            setBairro(bairro);
+            setNumero(numero);
+            setRua(rua);
+        }
+
+        public string EnderecoCompleto()
+        {
+            return "Rua " + Rua + ", Nº " + Numero + " Bairro " + Bairro + " Cidade: " + Cidade;
         }
 
         public int getId()
-        { return Id; }
-        public string getCEP() { return CEP;}
-        public string getRua() {  return Rua;}
-        public int getNumero() {  return Numero;}
-        public string getBairro() {  return Bairro;}
-        public string getCidade() {  return Cidade;}
+        {
+            return Id;
+        }
+        public string getCEP()
+        {
+            return CEP;
+        }
+        public string getRua()
+        {
+            return Rua;
+        }
+        public int getNumero()
+        {
+            return Numero;
+        }
+        public string getBairro()
+        {
+            return Bairro;
+        }
+        public string getCidade()
+        {
+            return Cidade;
+        }
 
         public void setId(int id)
-        { Id = id; }
-        public void setCEP(string cep)
-        { CEP = cep; }
+        {
+            Id = id;
+        }
+        public void setCÈP(string cep)
+        {
+            CEP = cep;
+        }
         public void setRua(string rua)
-        { Rua = rua; }
+        {
+            Rua = rua;
+        }
         public void setNumero(int numero)
-        { Numero = numero; }
+        {
+            Numero = numero;
+        }
         public void setBairro(string bairro)
-        { Bairro = bairro; }
+        {
+            Bairro = bairro;
+        }
         public void setCidade(string cidade)
-        { Cidade = cidade; }
-
-
-    
+        {
+            Cidade = cidade;
+        }
     }
 }

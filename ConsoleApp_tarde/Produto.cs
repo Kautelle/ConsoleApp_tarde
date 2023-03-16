@@ -4,54 +4,53 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp_tarde
+namespace ConsoleApp_Tarde
 {
     public class Produto
     {
         private int Id;
         private string Descricao;
         private decimal Valor;
-        
-        
+
         public Produto(int id, string descricao, decimal valor)
         {
             Id = id;
             Descricao = descricao;
             Valor = valor;
-            
         }
-
-        public int getid() 
-
-        { return Id; }
-
-        public string getDescricao()
-
-        { return Descricao; }
-
-        public decimal getValor()
-
-        {  return Valor; }
-
-        
-
+        public string ExibirDados()
+        {
+            return "Descrição " + Descricao + " R$ " + Valor;
+        }
+        public int getId()
+        {
+            return Id;
+        }
         public void setId(int id)
         {
-            
-                Id = id;
+            Id = id;
         }
+
+        public string getDescricao()
+        {
+            return Descricao;
+        }
+
         public void setDescricao(string descricao)
         {
-
             Descricao = descricao;
         }
-        public void setValor(decimal valor)
-        {
 
-            Valor = valor;
+        public decimal getValor()
+        {
+           return Valor;
         }
 
-
+        public void setValor(decimal valor)
+        {
+            if (valor > 0) { 
+                Valor = valor;
+            }
+        }
     }
-
 }

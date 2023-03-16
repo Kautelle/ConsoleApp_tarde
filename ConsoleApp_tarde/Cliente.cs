@@ -4,41 +4,64 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConsoleApp_tarde
+namespace ConsoleApp_Tarde
 {
     public class Cliente
     {
         private int Id;
-        private string Name;
+        private string Nome;
         private string Telefone;
+        private Endereco Endereco;
 
-    public Cliente(int id, string name, string telefone)
+        public Cliente(int id, string nome, string telefone, Endereco endereco)
         {
             Id = id;
-            Name = name;
+            Nome = nome;
             Telefone = telefone;
+            Endereco = endereco;
+        }
+        public void setEndereco(Endereco endereco)
+        {
+            Endereco = endereco;
         }
 
-        public int getId()
-        { return Id; }
-        public string getName() 
-        { return Name; }
-        
-        public string getTelefone() 
-        {return Telefone;}
+        public Endereco getEndereco()
+        {
+            return Endereco;
+        }
 
         public void setId(int id)
         {
             Id = id;
         }
-        public void setName(string name)
+
+        public int getId()
         {
-            Name = name;
+            return Id;
+        }
+        public void setNome(string nome)
+        {
+            Nome = nome;
         }
 
-        public void setTelefone(string telefone) 
+        public string getNome()
+        {
+            return Nome;
+        }
+
+        public void setTelefone(string telefone)
         {
             Telefone = telefone;
+        }
+
+        public string getTelefone()
+        {
+            return Telefone;
+        }
+
+        public string ExibirDados()
+        {
+            return Nome +" Telefone"+ Telefone + Endereco.EnderecoCompleto();
         }
     }
 }
